@@ -1,0 +1,124 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+ font-size: 62.5%; 
+
+ --ff-heading: 'Staatliches', cursive;
+ --ff-text: 'Palanquin', sans-serif;
+
+}
+header{
+  background: #8E9AAF;
+  height: 27.9rem
+  
+}
+header img{
+  margin: 3.2rem auto 2.8rem;
+  width: 13.7rem;
+  height: 13.7rem;
+  
+}
+header h1{
+  font-family: var(--ff-heading);
+  font-size: 4.0rem;
+  line-height: 3.4rem;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  font-weight: 400;
+  background: #CBC0D3;
+  padding: 0.8rem; 
+  
+}
+.page{
+  text-align: center;
+  max-width: 38.4rem;
+  margin: 0 auto;
+
+}
+main{
+  background: #EFF1FF;
+  padding: 1.4rem 3.2rem 6.0rem;
+  
+
+}
+main p{
+  font-family: var(--ff-text);
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: #23053A;
+  text-align:center ;
+  width: 30.5rem;
+  height: 7.5rem;
+  margin:0 auto 3.1rem;
+}
+main{
+  display: grid;
+  gap: 3.2rem;
+
+}
+.card1, .card2{
+  position: relative;
+
+  animation: downtop 700ms;
+  
+
+}
+.card1 h2, .card2 h2{
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+
+  font-family: var(--ff-heading);
+  color: #4A4E69;
+  font-size: 2.0rem;
+  font-weight: 400;
+  background: #FEEAFA;
+  padding:0.1rem 2.4rem;
+  border-radius: 20px;
+
+  animation: topdown 750ms 350ms backwards;
+
+}
+.card1 img{
+  height: 25rem;
+  object-fit: cover;
+  
+
+}
+.card2 img{
+  height: 45rem;
+  object-fit: cover;
+  
+}
+.card1 img:hover, .card2 img:hover{
+ /*  opacity: 0.9; */
+  transform: scale(1.1);
+  filter: contrast(1.5);
+  
+}
+
+@keyframes downtop{
+  0%{
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes topdown{
+  0%{
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+}
+}
